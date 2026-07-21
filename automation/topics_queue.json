@@ -1,0 +1,34 @@
+[
+  {
+    "type": "guide",
+    "title": "Ranger une salle de bain minuscule sans meuble sous vasque",
+    "slug": "guide-salle-de-bain-minuscule",
+    "angle": "Astuces pour optimiser le rangement d'une petite salle de bain en location, sans perçage."
+  },
+  {
+    "type": "comparatif",
+    "title": "Meilleurs paniers de rangement textile pliables",
+    "slug": "comparatif-paniers-textile",
+    "angle": "Comparatif de paniers pliables pour linge et rangement, adaptés aux petits espaces.",
+    "produits": ["Panier pliable grand format", "Panier avec compartiments", "Panier suspendu"]
+  },
+  {
+    "type": "guide",
+    "title": "Organiser un bureau d'appoint dans un coin de studio",
+    "slug": "guide-bureau-studio",
+    "angle": "Comment installer un espace de travail fonctionnel dans un studio sans perdre de place."
+  },
+  {
+    "type": "comparatif",
+    "title": "Meilleures housses de rangement sous vide",
+    "slug": "comparatif-housses-sous-vide",
+    "angle": "Comparatif de housses compressibles pour vêtements et textiles de saison.",
+    "produits": ["Housse manuelle", "Housse avec pompe électrique", "Lot de housses de tailles variées"]
+  },
+  {
+    "type": "guide",
+    "title": "Ranger l'entrée d'un appartement sans meuble encombrant",
+    "slug": "guide-entree-appartement",
+    "angle": "Solutions de rangement d'entrée compactes : chaussures, manteaux, clés."
+  }
+]
