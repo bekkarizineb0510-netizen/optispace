@@ -1,0 +1,31 @@
+name: Publication automatique quotidienne
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Générer le nouvel article
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python automation/generate_article.py
+
+      - name: Publier les changements
+        run: |
+          git config user.name "OptiSpace Bot"
+          git config user.email "bot@optispace.fr"
+          git add .
+          git diff --cached --quiet || git commit -m "Publication automatique du $(date +'%Y-%m-%d')"
+          git push
