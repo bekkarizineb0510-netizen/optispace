@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OptiSpace — Optimiser chaque m² de votre intérieur</title>
+<meta name="description" content="Comparatifs et guides pour ranger et optimiser les petits espaces : studios, appartements, cuisines et chambres.">
+<style>
+  :root{
+    --moss:#4A5D45;
+    --moss-dark:#333F30;
+    --sand:#EDE6D9;
+    --paper:#FAF7F0;
+    --ink:#2B2620;
+    --clay:#B26A45;
+    --mustard:#D4A73D;
+    --line: rgba(43,38,32,0.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height:1.5;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    margin:0;
+    color:var(--moss-dark);
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0;
+  }
+  .logo{
+    font-family:'Fraunces',serif;font-weight:700;font-size:1.3rem;
+    display:flex;align-items:center;gap:8px;
+  }
+  .logo .mark{
+    width:22px;height:22px;
+    background:repeating-linear-gradient(0deg, var(--moss) 0 4px, transparent 4px 6px);
+    border:1.5px solid var(--moss-dark);
+  }
+  nav.links{display:flex;gap:32px;font-size:0.95rem;font-weight:500;}
+  nav.links a:hover{color:var(--clay);}
+
+  /* Hero — signature: shelving grid */
+  .hero{
+    padding:64px 0 40px;
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;font-size:0.8rem;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--clay);margin-bottom:14px;display:block;
+  }
+  .hero h1{font-size:2.9rem;line-height:1.08;letter-spacing:-0.01em;}
+  .hero p.sub{
+    margin-top:18px;font-size:1.1rem;max-width:46ch;color:#4a453d;
+  }
+  .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:13px 24px;border-radius:2px;font-weight:600;
+    font-size:0.95rem;border:1.5px solid var(--moss-dark);
+  }
+  .btn.primary{background:var(--moss-dark);color:var(--paper);}
+  .btn.primary:hover{background:var(--moss);}
+  .btn.ghost{background:transparent;color:var(--moss-dark);}
+  .btn.ghost:hover{border-color:var(--clay);color:var(--clay);}
+
+  /* Shelf visual — grid of "drawers" */
+  .shelf{
+    display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);
+    gap:6px;aspect-ratio:1/1;
+  }
+  .drawer{
+    background:var(--sand);border:1.5px solid var(--line);border-radius:2px;
+    position:relative;display:flex;align-items:flex-end;padding:10px;
+  }
+  .drawer::after{
+    content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:28px;height:3px;background:var(--moss-dark);border-radius:2px;opacity:0.5;
+  }
+  .drawer:nth-child(1){background:var(--moss);}
+  .drawer:nth-child(5){background:var(--clay);}
+  .drawer:nth-child(9){background:var(--mustard);}
+  .drawer span{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--ink);opacity:0.55;}
+  .drawer:nth-child(1) span, .drawer:nth-child(5) span{color:var(--paper);opacity:0.8;}
+
+  /* Sections */
+  section{padding:56px 0;border-top:1px solid var(--line);}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;flex-wrap:wrap;gap:12px;}
+  .section-head h2{font-size:1.8rem;}
+  .section-head p{color:#6b6459;font-size:0.95rem;margin-top:6px;}
+
+  .grid-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .card{
+    border:1.5px solid var(--line);border-radius:3px;overflow:hidden;background:var(--paper);
+    transition:border-color 0.15s;
+  }
+  .card:hover{border-color:var(--moss);}
+  .card-top{
+    height:130px;background:var(--sand);position:relative;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .card-top .tag{
+    position:absolute;top:10px;left:10px;font-family:'IBM Plex Mono',monospace;
+    font-size:0.68rem;background:var(--moss-dark);color:var(--paper);padding:3px 8px;border-radius:2px;
+  }
+  .card-body{padding:18px 20px 22px;}
+  .card-body h3{font-size:1.1rem;margin-bottom:8px;}
+  .card-body p{font-size:0.9rem;color:#6b6459;margin:0 0 14px;}
+  .card-body .link{font-size:0.85rem;font-weight:600;color:var(--clay);}
+
+  .guides-list{display:flex;flex-direction:column;}
+  .guide-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:20px 0;border-bottom:1px solid var(--line);
+  }
+  .guide-row:first-child{border-top:1px solid var(--line);}
+  .guide-row .idx{font-family:'IBM Plex Mono',monospace;color:var(--clay);font-size:0.85rem;width:40px;}
+  .guide-row .title{flex:1;font-size:1.05rem;font-weight:600;font-family:'Fraunces',serif;color:var(--moss-dark);}
+  .guide-row .meta{font-size:0.8rem;color:#8a8377;font-family:'IBM Plex Mono',monospace;}
+  .guide-row:hover .title{color:var(--clay);}
+
+  footer{
+    background:var(--moss-dark);color:var(--sand);padding:40px 0 24px;margin-top:20px;
+  }
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+  footer a{color:var(--sand);opacity:0.8;font-size:0.85rem;}
+  footer a:hover{opacity:1;}
+  footer .legal{display:flex;gap:20px;flex-wrap:wrap;}
+  footer .disclosure{
+    font-size:0.78rem;opacity:0.65;max-width:640px;margin-top:14px;line-height:1.6;
+  }
+
+  @media (max-width:800px){
+    .hero{grid-template-columns:1fr;}
+    .grid-cards{grid-template-columns:1fr;}
+    nav.links{display:none;}
+    .hero h1{font-size:2.1rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo"><span class="mark"></span>OptiSpace</div>
+    <nav class="links">
+      <a href="#comparatifs">Comparatifs</a>
+      <a href="#guides">Guides</a>
+      <a href="a-propos.html">À propos</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div>
+    <span class="eyebrow">Rangement & petits espaces</span>
+    <h1>Chaque m² compte.<br>On vous aide à l'optimiser.</h1>
+    <p class="sub">Comparatifs testés et guides pratiques pour ranger studios, appartements et petites cuisines — sans travaux, sans se ruiner.</p>
+    <div class="cta-row">
+      <a href="#comparatifs" class="btn primary">Voir les comparatifs</a>
+      <a href="#guides" class="btn ghost">Lire les guides</a>
+    </div>
+  </div>
+  <div class="shelf" aria-hidden="true">
+    <div class="drawer"><span>01</span></div>
+    <div class="drawer"><span>02</span></div>
+    <div class="drawer"><span>03</span></div>
+    <div class="drawer"><span>04</span></div>
+    <div class="drawer"><span>05</span></div>
+    <div class="drawer"><span>06</span></div>
+    <div class="drawer"><span>07</span></div>
+    <div class="drawer"><span>08</span></div>
+    <div class="drawer"><span>09</span></div>
+  </div>
+</div>
+
+<section id="comparatifs">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>Comparatifs du moment</h2>
+        <p>Sélection testée pour les petits espaces</p>
+      </div>
+    </div>
+    <div class="grid-cards">
+      <div class="card">
+        <div class="card-top"><span class="tag">Comparatif</span></div>
+        <div class="card-body">
+          <h3>Bacs de rangement modulables</h3>
+          <p>5 modèles empilables comparés pour studios et petits placards.</p>
+          <a href="comparatif-bacs-rangement.html" class="link">Voir le comparatif →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top"><span class="tag">Comparatif</span></div>
+        <div class="card-body">
+          <h3>Étagères murales gain de place</h3>
+          <p>Les meilleures options sans perçage lourd pour location.</p>
+          <a href="comparatif-etageres-murales.html" class="link">Voir le comparatif →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top"><span class="tag">Comparatif</span></div>
+        <div class="card-body">
+          <h3>Organisateurs de tiroir</h3>
+          <p>Cuisine et bureau : les inserts qui tiennent vraiment dans le temps.</p>
+          <a href="comparatif-organisateurs-tiroir.html" class="link">Voir le comparatif →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guides">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>Guides pratiques</h2>
+        <p>Méthodes et astuces, sans achat obligatoire</p>
+      </div>
+    </div>
+    <div class="guides-list">
+      <a href="guide-studio-20m2.html" class="guide-row">
+        <span class="idx">01</span>
+        <span class="title">Ranger un studio de 20 m² sans se sentir à l'étroit</span>
+        <span class="meta">8 min</span>
+      </a>
+      <a href="guide-cuisine-sans-travaux.html" class="guide-row">
+        <span class="idx">02</span>
+        <span class="title">Optimiser une cuisine sans travaux ni perçage</span>
+        <span class="meta">6 min</span>
+      </a>
+      <a href="guide-sous-le-lit.html" class="guide-row">
+        <span class="idx">03</span>
+        <span class="title">Exploiter l'espace sous le lit intelligemment</span>
+        <span class="meta">5 min</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo" style="color:var(--sand);"><span class="mark" style="background:none;border-color:var(--sand);"></span>OptiSpace</div>
+      <p class="disclosure">En tant que Partenaire Amazon, OptiSpace réalise un bénéfice sur les achats remplissant les conditions requises. Les liens présents sur ce site peuvent être des liens affiliés.</p>
+    </div>
+    <div class="legal">
+      <a href="a-propos.html">À propos</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
