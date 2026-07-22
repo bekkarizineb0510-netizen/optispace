@@ -4,11 +4,7 @@
     "title": "Meilleurs paniers de rangement textile pliables",
     "slug": "comparatif-paniers-textile",
     "angle": "Comparatif de paniers pliables pour linge et rangement, adaptés aux petits espaces.",
-    "produits": [
-      "Panier pliable grand format",
-      "Panier avec compartiments",
-      "Panier suspendu"
-    ]
+    "produits": ["Panier pliable grand format", "Panier avec compartiments", "Panier suspendu"]
   },
   {
     "type": "guide",
@@ -21,16 +17,51 @@
     "title": "Meilleures housses de rangement sous vide",
     "slug": "comparatif-housses-sous-vide",
     "angle": "Comparatif de housses compressibles pour vêtements et textiles de saison.",
-    "produits": [
-      "Housse manuelle",
-      "Housse avec pompe électrique",
-      "Lot de housses de tailles variées"
-    ]
+    "produits": ["Housse manuelle", "Housse avec pompe électrique", "Lot de housses de tailles variées"]
   },
   {
     "type": "guide",
     "title": "Ranger l'entrée d'un appartement sans meuble encombrant",
     "slug": "guide-entree-appartement",
     "angle": "Solutions de rangement d'entrée compactes : chaussures, manteaux, clés."
+  },
+  {
+    "type": "comparatif",
+    "title": "Meilleurs porte-vêtements sur roulettes",
+    "slug": "comparatif-porte-vetements-roulettes",
+    "angle": "Comparatif de portants mobiles pour studios sans dressing.",
+    "produits": ["Portant simple en métal", "Portant double barre", "Portant avec housse de protection"]
+  },
+  {
+    "type": "guide",
+    "title": "Optimiser un dressing improvisé dans une penderie standard",
+    "slug": "guide-dressing-improvise",
+    "angle": "Astuces pour transformer une penderie classique en dressing fonctionnel, sans travaux."
+  },
+  {
+    "type": "comparatif",
+    "title": "Meilleurs range-chaussures gain de place",
+    "slug": "comparatif-range-chaussures",
+    "angle": "Comparatif de solutions de rangement chaussures adaptées aux petites entrées.",
+    "produits": ["Range-chaussures à suspendre", "Casier à chaussures empilable", "Sous-lit à chaussures"]
+  },
+  {
+    "type": "guide",
+    "title": "Ranger une chambre d'ado dans 12 m²",
+    "slug": "guide-chambre-12m2",
+    "angle": "Méthode pour optimiser une petite chambre avec bureau, rangement et espace de vie."
+  },
+  {
+    "type": "comparatif",
+    "title": "Meilleurs séparateurs de placard modulables",
+    "slug": "comparatif-separateurs-placard",
+    "angle": "Comparatif de systèmes de séparation pour organiser un placard existant sans travaux.",
+    "produits": ["Séparateurs à clipser", "Étagères suspendues modulables", "Tiroirs coulissants amovibles"]
+  },
+  {
+    "type": "guide",
+    "title": "Désencombrer un studio étudiant en 5 étapes",
+    "slug": "guide-desencombrer-studio-etudiant",
+    "angle": "Méthode rapide pour trier et organiser un studio étudiant en début d'année."
   }
 ]

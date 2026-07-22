@@ -220,6 +220,39 @@ TEMPLATE_COMPARATIF = """<!DOCTYPE html>
 """
 
 
+def update_homepage(topic: dict):
+    """Insère automatiquement un lien vers le nouvel article sur la page d'accueil."""
+    index_html = INDEX_FILE.read_text(encoding="utf-8")
+
+    if topic["type"] == "comparatif":
+        marker = "<!-- AUTO_COMPARATIFS_INSERT -->"
+        snippet = f"""      <div class="card">
+        <div class="card-top"><span class="tag">Comparatif</span></div>
+        <div class="card-body">
+          <h3>{topic['title']}</h3>
+          <p>{topic['angle']}</p>
+          <a href="{topic['slug']}.html" class="link">Voir le comparatif →</a>
+        </div>
+      </div>
+      {marker}"""
+    else:
+        marker = "<!-- AUTO_GUIDES_INSERT -->"
+        snippet = f"""      <a href="{topic['slug']}.html" class="guide-row">
+        <span class="idx">•</span>
+        <span class="title">{topic['title']}</span>
+        <span class="meta">Nouveau</span>
+      </a>
+      {marker}"""
+
+    if marker not in index_html:
+        print(f"⚠️  Marqueur {marker} introuvable dans index.html — ajout à la homepage sauté.")
+        return
+
+    index_html = index_html.replace(marker, snippet)
+    INDEX_FILE.write_text(index_html, encoding="utf-8")
+    print("Page d'accueil mise à jour avec le nouvel article.")
+
+
 def main():
     topic = load_next_topic()
     print(f"Génération de l'article : {topic['title']} ({topic['type']})")
@@ -235,6 +268,8 @@ def main():
     out_path = SITE_ROOT / f"{topic['slug']}.html"
     out_path.write_text(html, encoding="utf-8")
     print(f"Article publié : {out_path}")
+
+    update_homepage(topic)
 
     if topic["type"] == "comparatif":
         print(
