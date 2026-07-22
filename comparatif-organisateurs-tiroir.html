@@ -34,10 +34,12 @@
     text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;display:block;
   }
   .product-img{
-    width:180px;height:150px;background:var(--sand);border-radius:3px;
-    display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:#8a8377;
-    font-family:'IBM Plex Mono',monospace;
+    width:180px;height:150px;border-radius:3px;
+    display:flex;align-items:center;justify-content:center;
   }
+  .product-img.rank-1{background:var(--moss);color:var(--paper);}
+  .product-img.rank-2{background:var(--sand);color:var(--clay);}
+  .product-img.rank-3{background:var(--sand);color:var(--mustard);}
   .product-body h3{font-size:1.25rem;margin-bottom:8px;}
   .product-body p{font-size:0.92rem;color:#4a453d;margin:0 0 14px;max-width:60ch;}
   .pros-cons{display:flex;gap:24px;margin-bottom:16px;flex-wrap:wrap;}
@@ -73,7 +75,7 @@
   </div>
 
   <div class="product">
-    <div class="product-img">[Image produit]</div>
+    <div class="product-img rank-1"><svg viewBox="0 0 64 64" width="56" height="56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="12" width="44" height="40" rx="2"/><path d="M10 32h44"/><path d="M20 22h8M20 42h8M36 22h8M36 42h8"/></svg></div>
     <div class="product-body">
       <span class="product-rank">#1 — Meilleur choix global</span>
       <h3>Practical Comfort Organisateur de Tiroir en Aluminium (9 séparateurs)</h3>
@@ -88,7 +90,7 @@
   </div>
 
   <div class="product">
-    <div class="product-img">[Image produit]</div>
+    <div class="product-img rank-2"><svg viewBox="0 0 64 64" width="56" height="56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="12" width="44" height="40" rx="2"/><path d="M10 32h44"/><path d="M20 22h8M20 42h8M36 22h8M36 42h8"/></svg></div>
     <div class="product-body">
       <span class="product-rank">#2 — Meilleur rapport qualité-prix</span>
       <h3>Relaxdays Organiseur de Tiroir Réglable</h3>
@@ -103,7 +105,7 @@
   </div>
 
   <div class="product">
-    <div class="product-img">[Image produit]</div>
+    <div class="product-img rank-3"><svg viewBox="0 0 64 64" width="56" height="56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="12" width="44" height="40" rx="2"/><path d="M10 32h44"/><path d="M20 22h8M20 42h8M36 22h8M36 42h8"/></svg></div>
     <div class="product-body">
       <span class="product-rank">#3 — Idéal pour les couverts</span>
       <h3>Lifewit Range Couverts Extensible</h3>
