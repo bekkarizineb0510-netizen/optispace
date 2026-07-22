@@ -1,12 +1,5 @@
 [
   {
-    "type": "comparatif",
-    "title": "Meilleurs paniers de rangement textile pliables",
-    "slug": "comparatif-paniers-textile",
-    "angle": "Comparatif de paniers pliables pour linge et rangement, adaptés aux petits espaces.",
-    "produits": ["Panier pliable grand format", "Panier avec compartiments", "Panier suspendu"]
-  },
-  {
     "type": "guide",
     "title": "Organiser un bureau d'appoint dans un coin de studio",
     "slug": "guide-bureau-studio",
@@ -17,7 +10,11 @@
     "title": "Meilleures housses de rangement sous vide",
     "slug": "comparatif-housses-sous-vide",
     "angle": "Comparatif de housses compressibles pour vêtements et textiles de saison.",
-    "produits": ["Housse manuelle", "Housse avec pompe électrique", "Lot de housses de tailles variées"]
+    "produits": [
+      "Housse manuelle",
+      "Housse avec pompe électrique",
+      "Lot de housses de tailles variées"
+    ]
   },
   {
     "type": "guide",
@@ -30,7 +27,11 @@
     "title": "Meilleurs porte-vêtements sur roulettes",
     "slug": "comparatif-porte-vetements-roulettes",
     "angle": "Comparatif de portants mobiles pour studios sans dressing.",
-    "produits": ["Portant simple en métal", "Portant double barre", "Portant avec housse de protection"]
+    "produits": [
+      "Portant simple en métal",
+      "Portant double barre",
+      "Portant avec housse de protection"
+    ]
   },
   {
     "type": "guide",
@@ -43,7 +44,11 @@
     "title": "Meilleurs range-chaussures gain de place",
     "slug": "comparatif-range-chaussures",
     "angle": "Comparatif de solutions de rangement chaussures adaptées aux petites entrées.",
-    "produits": ["Range-chaussures à suspendre", "Casier à chaussures empilable", "Sous-lit à chaussures"]
+    "produits": [
+      "Range-chaussures à suspendre",
+      "Casier à chaussures empilable",
+      "Sous-lit à chaussures"
+    ]
   },
   {
     "type": "guide",
@@ -56,7 +61,11 @@
     "title": "Meilleurs séparateurs de placard modulables",
     "slug": "comparatif-separateurs-placard",
     "angle": "Comparatif de systèmes de séparation pour organiser un placard existant sans travaux.",
-    "produits": ["Séparateurs à clipser", "Étagères suspendues modulables", "Tiroirs coulissants amovibles"]
+    "produits": [
+      "Séparateurs à clipser",
+      "Étagères suspendues modulables",
+      "Tiroirs coulissants amovibles"
+    ]
   },
   {
     "type": "guide",
