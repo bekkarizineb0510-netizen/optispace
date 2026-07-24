@@ -1,16 +1,5 @@
 [
   {
-    "type": "comparatif",
-    "title": "Meilleures housses de rangement sous vide",
-    "slug": "comparatif-housses-sous-vide",
-    "angle": "Comparatif de housses compressibles pour vêtements et textiles de saison.",
-    "produits": [
-      "Housse manuelle",
-      "Housse avec pompe électrique",
-      "Lot de housses de tailles variées"
-    ]
-  },
-  {
     "type": "guide",
     "title": "Ranger l'entrée d'un appartement sans meuble encombrant",
     "slug": "guide-entree-appartement",
