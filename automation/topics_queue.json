@@ -1,16 +1,5 @@
 [
   {
-    "type": "comparatif",
-    "title": "Meilleurs porte-vêtements sur roulettes",
-    "slug": "comparatif-porte-vetements-roulettes",
-    "angle": "Comparatif de portants mobiles pour studios sans dressing.",
-    "produits": [
-      "Portant simple en métal",
-      "Portant double barre",
-      "Portant avec housse de protection"
-    ]
-  },
-  {
     "type": "guide",
     "title": "Optimiser un dressing improvisé dans une penderie standard",
     "slug": "guide-dressing-improvise",
